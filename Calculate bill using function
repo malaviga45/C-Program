@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+// Function prototype
+float calculateBill(int n, float prices[]);
+
+int main() {
+    int n, i;
+    
+    printf("Enter the number of items: ");
+    scanf("%d", &n);
+    
+    float prices[n];  // Array to store prices
+    
+    // Input prices for each item
+    for(i = 0; i < n; i++) {
+        printf("Enter price of item %d: ", i + 1);
+        scanf("%f", &prices[i]);
+    }
+    
+    // Call the function to calculate total bill
+    float total = calculateBill(n, prices);
+    
+    printf("\nTotal Bill Amount: %.2f\n", total);
+    
+    return 0;
+}
+
+// Function to calculate total bill
+float calculateBill(int n, float prices[]) {
+    float sum = 0;
+    for(int i = 0; i < n; i++) {
+        sum += prices[i];
+    }
+    return sum;
+}
