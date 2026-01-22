@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{
+    float sales[7];
+    float totalSales = 0;
+    int i;
+
+    // Display program title
+    printf("Weekly Sales Calculation Program\n");
+    printf("--------------------------------\n");
+
+    // Input sales for 7 days
+    for (i = 0; i < 7; i++)
+    {
+        printf("Enter sales for day %d: ", i + 1);
+        scanf("%f", &sales[i]);
+    }
+
+    // Calculate total weekly sales
+    for (i = 0; i < 7; i++)
+    {
+        totalSales = totalSales + sales[i];
+    }
+
+    // Display total sales
+    printf("\nTotal Weekly Sales = %.2f\n", totalSales);
+
+    return 0;
+}
