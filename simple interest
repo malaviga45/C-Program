@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main()
+{
+    float principal;
+    float rate;
+    float time;
+    float simpleInterest;
+    float totalAmount;
+
+    // Display program title
+    printf("Simple Interest Calculation Program\n");
+    printf("-----------------------------------\n");
+
+    // Input principal amount
+    printf("Enter the principal amount: ");
+    scanf("%f", &principal);
+
+    // Input rate of interest
+    printf("Enter the rate of interest: ");
+    scanf("%f", &rate);
+
+    // Input time period
+    printf("Enter the time in years: ");
+    scanf("%f", &time);
+
+    // Calculate simple interest
+    simpleInterest = (principal * rate * time) / 100;
+
+    // Calculate total amount
+    totalAmount = principal + simpleInterest;
+
+    // Display results
+    printf("Simple Interest = %.2f\n", simpleInterest);
+    printf("Total Amount = %.2f\n", totalAmount);
+
+    // End of program
+    return 0;
+}
