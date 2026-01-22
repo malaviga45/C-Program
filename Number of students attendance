@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+{
+    int totalStudents;
+    int i;
+
+    // Ask the user to enter total number of students
+    printf("Enter total number of students: ");
+    scanf("%d", &totalStudents);
+
+    // Check for valid number of students
+    if (totalStudents <= 0)
+    {
+        printf("Invalid number of students.\n");
+    }
+    else
+    {
+        printf("Attendance Numbers of Students:\n");
+
+        // Loop to print attendance numbers
+        for (i = 1; i <= totalStudents; i++)
+        {
+            printf("Attendance Number: %d\n", i);
+        }
+
+        printf("All attendance numbers printed successfully.\n");
+    }
+
+    return 0;
+}
