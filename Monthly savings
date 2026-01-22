@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main()
+{
+    float income;
+    float rent;
+    float food;
+    float transport;
+    float electricity;
+    float otherExpenses;
+    float totalExpenses;
+    float savings;
+
+    // Display program title
+    printf("Monthly Savings Report Program\n");
+    printf("-------------------------------\n");
+
+    // Input monthly income
+    printf("Enter monthly income: ");
+    scanf("%f", &income);
+
+    // Input expenses
+    printf("Enter rent expense: ");
+    scanf("%f", &rent);
+
+    printf("Enter food expense: ");
+    scanf("%f", &food);
+
+    printf("Enter transport expense: ");
+    scanf("%f", &transport);
+
+    printf("Enter electricity bill: ");
+    scanf("%f", &electricity);
+
+    printf("Enter other expenses: ");
+    scanf("%f", &otherExpenses);
+
+    // Calculate total expenses
+    totalExpenses = rent + food + transport + electricity + otherExpenses;
+
+    // Calculate savings
+    savings = income - totalExpenses;
+
+    // Display report
+    printf("\nMonthly Savings Report\n");
+    printf("----------------------\n");
+    printf("Total Income     : %.2f\n", income);
+    printf("Total Expenses   : %.2f\n", totalExpenses);
+    printf("Monthly Savings  : %.2f\n", savings);
+
+    return 0;
+}
