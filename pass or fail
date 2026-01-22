@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+    int marks;
+
+    // Ask the user to enter marks
+    printf("Enter the marks obtained: ");
+    scanf("%d", &marks);
+
+    // Check for valid marks
+    if (marks < 0 || marks > 100)
+    {
+        printf("Invalid marks entered.\n");
+    }
+    else
+    {
+        // Check pass or fail condition
+        if (marks >= 40)
+        {
+            printf("Result: PASS\n");
+            printf("Congratulations! You have passed the exam.\n");
+        }
+        else
+        {
+            printf("Result: FAIL\n");
+            printf("Better luck next time.\n");
+        }
+    }
+
+    return 0;
+}
