@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float principal;
+    float rate;
+    float time;
+    float amount;
+    float compoundInterest;
+
+    // Display program title
+    printf("Compound Interest Calculation Program\n");
+    printf("-------------------------------------\n");
+
+    // Input principal amount
+    printf("Enter the principal amount: ");
+    scanf("%f", &principal);
+
+    // Input rate of interest
+    printf("Enter the rate of interest: ");
+    scanf("%f", &rate);
+
+    // Input time period
+    printf("Enter the time in years: ");
+    scanf("%f", &time);
+
+    // Calculate amount using compound interest formula
+    amount = principal * pow((1 + rate / 100), time);
+
+    // Calculate compound interest
+    compoundInterest = amount - principal;
+
+    // Display results
+    printf("Total Amount = %.2f\n", amount);
+    printf("Compound Interest = %.2f\n", compoundInterest);
+
+    return 0;
+}
