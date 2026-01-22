@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+    int totalMinutes;
+    int hours;
+    int remainingMinutes;
+
+    /* Ask the user to enter total minutes */
+    printf("Enter the total number of minutes: ");
+    scanf("%d", &totalMinutes);
+
+    /* Calculate hours */
+    hours = totalMinutes / 60;
+
+    /* Calculate remaining minutes */
+    remainingMinutes = totalMinutes % 60;
+
+    /* Display the result */
+    printf("\nConversion Result:\n");
+    printf("-------------------\n");
+    printf("Total Minutes      : %d\n", totalMinutes);
+    printf("Hours              : %d\n", hours);
+    printf("Remaining Minutes  : %d\n", remainingMinutes);
+
+    printf("\nProgram executed successfully.\n");
+
+    return 0;
+}
