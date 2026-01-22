@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{
+    float basicSalary;
+    float bonus;
+    float totalSalary;
+
+    /* Input basic salary */
+    printf("Enter the basic salary: ");
+    scanf("%f", &basicSalary);
+
+    /* Input bonus amount */
+    printf("Enter the bonus amount: ");
+    scanf("%f", &bonus);
+
+    /* Calculate total salary */
+    totalSalary = basicSalary + bonus;
+
+    /* Display salary details */
+    printf("\nSalary Details\n");
+    printf("-----------------\n");
+    printf("Basic Salary : %.2f\n", basicSalary);
+    printf("Bonus        : %.2f\n", bonus);
+    printf("Total Salary : %.2f\n", totalSalary);
+
+    printf("\nSalary calculation completed successfully.\n");
+
+    return 0;
+}
