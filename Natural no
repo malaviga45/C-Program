@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    int i;
+    int sum = 0;
+
+    // Display program title
+    printf("Sum of First N Natural Numbers Program\n");
+    printf("-------------------------------------\n");
+
+    // Input value of n
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+
+    // Check for valid input
+    if (n <= 0)
+    {
+        printf("Please enter a positive integer.\n");
+    }
+    else
+    {
+        // Calculate sum using loop
+        for (i = 1; i <= n; i++)
+        {
+            sum = sum + i;
+        }
+
+        // Display result
+        printf("Sum of first %d natural numbers = %d\n", n, sum);
+    }
+
+    return 0;
+}
