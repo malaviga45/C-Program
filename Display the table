@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+    int number;
+    int i;
+    int result;
+
+    // Ask the user to enter a number
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    // Check for valid input
+    if (number <= 0)
+    {
+        printf("Invalid number entered.\n");
+    }
+    else
+    {
+        printf("Multiplication Table of %d\n", number);
+
+        // Loop to print multiplication table
+        for (i = 1; i <= 10; i++)
+        {
+            result = number * i;
+            printf("%d x %d = %d\n", number, i, result);
+        }
+
+        printf("Table displayed successfully.\n");
+    }
+
+    return 0;
+}
