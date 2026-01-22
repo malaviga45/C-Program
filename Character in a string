@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    char str[100];
+    int count = 0, i;
+
+    // Input string
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    // Count characters (excluding newline)
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        if(str[i] != '\n')
+            count++;
+    }
+
+    // Display result
+    printf("Number of characters = %d\n", count);
+
+    return 0;
+}
