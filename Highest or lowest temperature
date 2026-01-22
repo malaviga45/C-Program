@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main()
+{
+    float temp[7];
+    float highest;
+    float lowest;
+    int i;
+
+    // Display program title
+    printf("Weekly Temperature Analysis Program\n");
+    printf("-----------------------------------\n");
+
+    // Input temperatures for 7 days
+    for (i = 0; i < 7; i++)
+    {
+        printf("Enter temperature for day %d: ", i + 1);
+        scanf("%f", &temp[i]);
+    }
+
+    // Initialize highest and lowest
+    highest = temp[0];
+    lowest = temp[0];
+
+    // Find highest and lowest temperature
+    for (i = 1; i < 7; i++)
+    {
+        if (temp[i] > highest)
+        {
+            highest = temp[i];
+        }
+
+        if (temp[i] < lowest)
+        {
+            lowest = temp[i];
+        }
+    }
+
+    // Display results
+    printf("\nHighest Temperature = %.2f\n", highest);
+    printf("Lowest Temperature  = %.2f\n", lowest);
+
+    return 0;
+}
