@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main()
+{
+    int empId;
+    float basicSalary;
+    float hra;
+    float da;
+    float pf;
+    float grossSalary;
+    float netSalary;
+
+    // Display program title
+    printf("Employee Salary Slip Program\n");
+    printf("-----------------------------\n");
+
+    // Input employee details
+    printf("Enter Employee ID: ");
+    scanf("%d", &empId);
+
+    printf("Enter Basic Salary: ");
+    scanf("%f", &basicSalary);
+
+    // Calculate allowances
+    hra = basicSalary * 0.20;   // 20% HRA
+    da  = basicSalary * 0.10;   // 10% DA
+
+    // Calculate deductions
+    pf = basicSalary * 0.08;    // 8% PF
+
+    // Calculate gross and net salary
+    grossSalary = basicSalary + hra + da;
+    netSalary = grossSalary - pf;
+
+    // Display salary slip
+    printf("\n----- Salary Slip -----\n");
+    printf("Employee ID     : %d\n", empId);
+    printf("Basic Salary    : %.2f\n", basicSalary);
+    printf("HRA             : %.2f\n", hra);
+    printf("DA              : %.2f\n", da);
+    printf("PF Deduction    : %.2f\n", pf);
+    printf("Gross Salary    : %.2f\n", grossSalary);
+    printf("Net Salary      : %.2f\n", netSalary);
+
+    return 0;
+}
