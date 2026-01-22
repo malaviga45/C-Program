@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, i;
+    int marks[50];
+    int topperMark, topperIndex;
+
+    // Input number of students
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+
+    // Input marks of students
+    printf("Enter marks of students:\n");
+    for(i = 0; i < n; i++)
+    {
+        printf("Student %d: ", i + 1);
+        scanf("%d", &marks[i]);
+    }
+
+    // Assume first student is topper
+    topperMark = marks[0];
+    topperIndex = 0;
+
+    // Find highest mark
+    for(i = 1; i < n; i++)
+    {
+        if(marks[i] > topperMark)
+        {
+            topperMark = marks[i];
+            topperIndex = i;
+        }
+    }
+
+    // Display topper details
+    printf("\nTopper of the Class:\n");
+    printf("Student Number: %d\n", topperIndex + 1);
+    printf("Highest Marks: %d\n", topperMark);
+
+    return 0;
+}
