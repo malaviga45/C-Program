@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main()
+{
+    int number;
+    int i;
+    long long factorial = 1;
+
+    // Display program title
+    printf("Factorial Calculation Program\n");
+    printf("-----------------------------\n");
+
+    // Input number from user
+    printf("Enter a positive integer: ");
+    scanf("%d", &number);
+
+    // Check if number is negative
+    if (number < 0)
+    {
+        printf("Factorial of a negative number is not possible.\n");
+    }
+    else
+    {
+        // Calculate factorial using loop
+        for (i = 1; i <= number; i++)
+        {
+            factorial = factorial * i;
+        }
+
+        // Display result
+        printf("Factorial of %d = %lld\n", number, factorial);
+    }
+
+    return 0;
+}
