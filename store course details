@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+// Define structure
+struct course
+{
+    int course_id;
+    char course_name[50];
+    char instructor[50];
+    int duration;      // in hours
+    float fees;
+};
+
+int main()
+{
+    struct course c;
+
+    // Input course details
+    printf("Enter Course ID: ");
+    scanf("%d", &c.course_id);
+
+    printf("Enter Course Name: ");
+    scanf("%s", c.course_name);
+
+    printf("Enter Instructor Name: ");
+    scanf("%s", c.instructor);
+
+    printf("Enter Course Duration (in hours): ");
+    scanf("%d", &c.duration);
+
+    printf("Enter Course Fees: ");
+    scanf("%f", &c.fees);
+
+    // Display course details
+    printf("\n--- Course Details ---\n");
+    printf("Course ID: %d\n", c.course_id);
+    printf("Course Name: %s\n", c.course_name);
+    printf("Instructor Name: %s\n", c.instructor);
+    printf("Duration: %d hours\n", c.duration);
+    printf("Fees: %.2f\n", c.fees);
+
+    return 0;
+}
