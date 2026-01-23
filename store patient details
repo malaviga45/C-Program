@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+// Define structure
+struct patient
+{
+    int patient_id;
+    char name[50];
+    int age;
+    char disease[50];
+};
+
+int main()
+{
+    struct patient p;
+
+    // Input patient details
+    printf("Enter Patient ID: ");
+    scanf("%d", &p.patient_id);
+
+    printf("Enter Patient Name: ");
+    scanf("%s", p.name);
+
+    printf("Enter Patient Age: ");
+    scanf("%d", &p.age);
+
+    printf("Enter Disease: ");
+    scanf("%s", p.disease);
+
+    // Display patient details
+    printf("\n--- Hospital Patient Details ---\n");
+    printf("Patient ID: %d\n", p.patient_id);
+    printf("Patient Name: %s\n", p.name);
+    printf("Age: %d\n", p.age);
+    printf("Disease: %s\n", p.disease);
+
+    return 0;
+}
