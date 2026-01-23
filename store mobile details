@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+// Define structure
+struct mobile
+{
+    int model_no;
+    char brand[50];
+    float price;
+    int storage;
+};
+
+int main()
+{
+    struct mobile m;
+
+    // Input mobile details
+    printf("Enter Mobile Model Number: ");
+    scanf("%d", &m.model_no);
+
+    printf("Enter Mobile Brand: ");
+    scanf("%s", m.brand);
+
+    printf("Enter Mobile Price: ");
+    scanf("%f", &m.price);
+
+    printf("Enter Mobile Storage (GB): ");
+    scanf("%d", &m.storage);
+
+    // Display mobile details
+    printf("\n--- Mobile Details ---\n");
+    printf("Model Number: %d\n", m.model_no);
+    printf("Brand: %s\n", m.brand);
+    printf("Price: %.2f\n", m.price);
+    printf("Storage: %d GB\n", m.storage);
+
+    return 0;
+}
